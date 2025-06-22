@@ -1,0 +1,16 @@
+[package]
+name = "rustdoc-llms"
+description = "Rust documentation helper to generate file llms.txt to help training AI large language models (LLMs)."
+version = "0.1.0"
+edition = "2024"
+authors = ["Joel Parker Henderson <joel@joelparkerhenderson.com>"]
+readme = "README.md"
+repository = "https://github.com/sixarm/rustdoc-llms/"
+license = "MIT OR Apache-2.0 OR GPL-2.0 OR GPL-3.0 OR BSD-3-Clause"
+categories = ["development-tools", "development-tools::testing", "rust-patterns"]
+keywords = ["llm", "llms", "ai", "training", "documentation"]
+include = ["src/**/*", "LICENSE.md", "README.md"]
+
+[dependencies]
+toml = "0.8.23"
+rustdoc-md = "0.1.0"

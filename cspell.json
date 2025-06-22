@@ -1,0 +1,14 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "llms",
+        "RUSTC_BOOTSTRAP",
+        "rustdoc",
+        "RUSTDOCFLAGS"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
