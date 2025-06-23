@@ -1,8 +1,37 @@
 # rustdoc-llms
 
-Rust documentation helper to generate `llms.txt` file for large language models (LLMs).
+Rust documentation helper that helps a Rust crate developer generate a file
+`llms.txt` that helps provide context to large language models (LLMs).
 
 Thanks to excellent work by the Rust team, rustdoc team, and rustdoc-md team.
+
+## How to use this
+
+Install:
+
+```sh
+cargo install rustdoc-llms
+```
+
+Use the tool when you're working on a crate and you want to document it:
+
+```sh
+rustdoc-llms
+```
+
+The tool creates two files:
+
+* `target/doc/foo_bar.json` (this uses your own crate naming convention)
+
+* `target/doc/llms.txt` (this is a markdown file created by rustdoc-md)
+
+If you like, you can copy these files to the top level of your repository, which
+can make the files easier to find for search engines and AI systems:
+
+```sh
+cp target/doc/foo_bar.json llms.json
+cp target/doc/llms.txt llms.txt
+```
 
 ## Scope
 
@@ -36,11 +65,12 @@ RUSTC_BOOTSTRAP=1 RUSTDOCFLAGS="-Z unstable-options --output-format json" cargo 
 Step 2: Convert from JSON into Markdown:
 
 ```sh
-rustdoc-md --path target/doc/lorem_ipsum.json --output target/doc/lorem_ipsum.md
+rustdoc-md --path target/doc/foo_bar.json --output target/doc/foo_bar.md
 ```
 
 Step 3: Copy from Markdown file into LLMs file:
 
 ```sh
-cp target/doc/lorem_ipsum.md target/doc/llms.txt
+cp target/doc/foo_bar.json llms.json
+cp target/doc/foo_bar.md llms.txt
 ```
