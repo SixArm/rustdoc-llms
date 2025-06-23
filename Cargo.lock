@@ -192,7 +192,7 @@ dependencies = [
 
 [[package]]
 name = "rustdoc-llms"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "rustdoc-md",
  "toml",

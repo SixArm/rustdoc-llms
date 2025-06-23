@@ -1,7 +1,7 @@
 [package]
 name = "rustdoc-llms"
 description = "Rust documentation helper to generate file llms.txt to help training AI large language models (LLMs)."
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 authors = ["Joel Parker Henderson <joel@joelparkerhenderson.com>"]
 readme = "README.md"
