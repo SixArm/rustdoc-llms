@@ -19,9 +19,9 @@ pub(crate) mod cargo_helpers { /* ... */ }
 #### Function `lib_name`
 
 Get a crate's lib name from its Cargo.toml file.
- 
+
 Steps:
- 
+
 1. Read the `Cargo.toml` file
 2. Parse it as TOML
 3. If there is a `[lib]` section with a `name` field, then return it.
