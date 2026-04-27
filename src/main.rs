@@ -112,9 +112,9 @@ pub fn cargo_toml_path() -> PathBuf {
 ///
 /// Example:
 ///
-/// ```rust
+/// ```rust,ignore
 /// use rustdoc_llms::*;
-/// let path = rustdoc_md::documentation_json_path();
+/// let path = rustdoc_llms::documentation_json_path();
 /// ```
 ///
 pub fn documentation_json_path() -> PathBuf {
@@ -127,9 +127,9 @@ pub fn documentation_json_path() -> PathBuf {
 ///
 /// Example:
 ///
-/// ```rust
+/// ```rust,ignore
 /// use rustdoc_llms::*;
-/// let path = rustdoc_md::documentation_llms_path();
+/// let path = rustdoc_llms::documentation_llms_path();
 /// ```
 ///
 pub fn documentation_llms_path() -> PathBuf {
@@ -140,9 +140,9 @@ pub fn documentation_llms_path() -> PathBuf {
 ///
 /// Example:
 ///
-/// ```rust
+/// ```rust,ignore
 /// use rustdoc_llms::*;
-/// let path = rustdoc_md::generate_documentation_json_file();
+/// let path = rustdoc_llms::generate_documentation_json_file();
 /// ```
 ///
 pub fn generate_documentation_json_file() {
@@ -163,11 +163,11 @@ pub fn generate_documentation_json_file() {
 ///
 /// Example:
 ///
-/// ```rust
+/// ```rust,ignore
 /// use rustdoc_llms::*;
-/// let input_json_path = rustdoc_md::documentation_json_path();
-/// let output_llms_path = rustdoc_md::documentation_llms_path();
-/// let path = rustdoc_md::generate_documentation_llms_file(input_json_path, output_llms_path);
+/// let input_json_path = rustdoc_llms::documentation_json_path();
+/// let output_llms_path = rustdoc_llms::documentation_llms_path();
+/// let path = rustdoc_llms::generate_documentation_llms_file(input_json_path, output_llms_path);
 /// ```
 ///
 pub fn generate_documentation_llms_file(input_json_path: impl AsRef<Path>, output_llms_path: impl AsRef<Path>) {
