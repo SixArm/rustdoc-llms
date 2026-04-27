@@ -2,17 +2,17 @@ use std::fs;
 use toml::Value;
 use std::path::Path;
 
-/// Get a crate's lib name from its Cargo.toml file.
+/// Get a crate's lib name from its `Cargo.toml` file.
 ///
 /// Steps:
 ///
-/// 1. Read the `Cargo.toml` file
-/// 2. Parse it as TOML
-/// 3. If there is a `[lib]` section with a `name` field, then return it.
-/// 4. If there is a `package.name`, then return it.
+/// 1. Read the `Cargo.toml` file.
+/// 2. Parse it as TOML.
+/// 3. If there is a `[lib]` section with a `name` field, return it.
+/// 4. Otherwise if there is a `package.name`, return it.
 /// 5. Otherwise return an error.
 ///
-/// This llb name priority follows Cargo's explicit rules about library naming:
+/// This priority follows Cargo's explicit rules about library naming:
 /// `[lib].name` takes precedence over `package.name`.
 ///
 pub fn lib_name(path: impl AsRef<Path>) -> Result<String, Box<dyn std::error::Error>> {
